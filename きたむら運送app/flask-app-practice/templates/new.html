@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <form action="/create" method="POST">
+        <div class="form-group">
+            
+            <label for="title">置き場所</label>
+            <input type="text" name="title" value="" class="form-control" placeholder="置き場所と回収日時を書いてください">
+        
+        </div>
+        <div class="form-group">
+           
+            <label for="content">備考</label>
+            <textarea class="form-control" name="content" cols="40" rows="10" placeholder="何か共有したいことがあればお書きください"></textarea>
+        
+        </div>
+        
+        <button type="submit" class="btn btn-primary">保存</button>
+        <button type="button" class="btn btn-danger" onclick="history.back()">キャンセル</button>
+    
+    </form>
+</div>
+{% endblock %}
